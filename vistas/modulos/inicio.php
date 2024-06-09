@@ -1,4 +1,4 @@
-<div class="content-wrapper" style="background-color: #9E63B8;">
+<div class="content-wrapper" style="background-color: #EAEAEA;">
 
     <section class="content header" style="background-color: #9E63B8;">
         <h1 style="color: white;">
