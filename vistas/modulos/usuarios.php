@@ -6,7 +6,7 @@
         </h1>
         <ol class="breadcrumb" style="background-color: #7D2BA2;">
             <li><a href="inicio" style="color: white;"> <i class="fa fa-dashboard"></i>Inicio</a></li>
-            <li class="active" style="color: white;">Administrar usuarios</li>
+            <li class="active" style="color: white;">Administrar USUARIOS</li>
         </ol>
     </section> 
 
