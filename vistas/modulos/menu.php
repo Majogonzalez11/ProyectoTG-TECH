@@ -1,17 +1,17 @@
-<aside class="main-sidebar">
+<aside class="main-sidebar" style="background-color: #7D2BA2;">
     <section class="sidebar">
         <ul class="sidebar-menu">
             <li class="active">
-                <a href="inicio">
-                    <i class="fa fa-home"></i>
+                <a href="inicio" style="background-color: #7D2BA2;">
+                    <i class="fa fa-home" style="color: white;"></i>
                     <span>Inicio</span>
                 </a>
             </li>
 
             <!--Se manejaran los perfiles/roles, etc -->
             <li class="">
-                <a href="usuarios">
-                    <i class="fa fa-user"></i>
+                <a href="usuarios" style="background-color: #7D2BA2;">
+                    <i class="fa fa-user" style="color: white;"></i>
                     <span>Usuarios</span>
                 </a>
             </li>
@@ -20,75 +20,80 @@
                  FONTAWESOME.IO-->
 
             <li class="">
-                <a href="categorias">
-                    <i class="fa fa-th"></i>
+                <a href="categorias" style="background-color: #7D2BA2;">
+                    <i class="fa fa-th" style="color: white;"></i>
                     <span>Categorías</span>
                 </a>
             </li>
 
             <li>
-                <a href="productos">
-                    <i class="fa fa-product-hunt"></i>
+                <a href="productos" style="background-color: #7D2BA2;">
+                    <i class="fa fa-product-hunt" style="color: white;"></i>
                     <span>Productos</span>
                 </a>
             </li>
 
             <li>
-                <a href="clientes">
-                    <i class="fa fa-users"></i>
+                <a href="inventario" style="background-color: #7D2BA2;">
+                <i class="fa fa-database" style="color: white;"></i>
+                    <span>Inventario</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="clientes" style="background-color: #7D2BA2;">
+                    <i class="fa fa-users" style="color: white;"></i>
                     <span>Clientes</span>
                 </a>
             </li>
 
             <li>
-                <a href="proveedores">
-                <i class="fa fa-truck"></i>
+                <a href="proveedores" style="background-color: #7D2BA2;">
+                <i class="fa fa-truck" style="color: white;"></i>
                     <span>Proveedores</span>
                 </a>
             </li>
 
-            <li>
-                <a href="inventario">
-                <i class="fa fa-database"></i>
-                    <span>Inventario</span>
-                </a>
-            </li>
-            
-            <li class="treeview">
-                <a href="">
-                    <i class="fa fa-list-ul"></i>
+           
+            <li class="treeview" >
+                <a href="" style="background-color: #7D2BA2;">
+                    <i class="fa fa-list-ul" ></i>
                     <span>Ventas</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
+                    <span class="pull-right-container" >
+                        <i class="fa fa-angle-left pull-right" style="color: white;"></i>
                     </span>
                 </a>
 
-                <ul class="treeview-menu">
+                <ul class="treeview-menu" style="background-color: #7D2BA2;">
                     <li>
-                        <a href="ventas">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Administrar ventas</span>
+                        <a href="ventas" style="background-color: #7D2BA2;">
+                            <i class="fa fa-circle-o" style="color: white;"></i>
+                            <span style="color: white;">Administrar ventas</span>
                         </a>
                     </li>
                     <li>
-                        <a href="crear-venta">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Crear venta</span>
+                        <a href="crear-venta" style="background-color: #7D2BA2;">
+                            <i class="fa fa-circle-o" style="color: white;"></i>
+                            <span style="color: white;">Crear venta</span>
                         </a>
                     </li>
 
                     <li>
-                        <a href="reportes">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Reporte de ventas</span>
+                        <a href="reportes" style="background-color: #7D2BA2;">
+                            <i class="fa fa-circle-o" style="color: white;"></i>
+                            <span style="color: white;">Reporte de ventas</span>
                         </a>
                     </li>
+                    
                 </ul>
 
             </li>
-
-
-        
+            <li>
+                <a href="facturas" style="background-color: #7D2BA2;">
+                <i class="fa fa-circle" style="color: white;"></i>
+                    <span >facturas</span>
+                </a>
+            </li>
         </ul>
 
     </section>

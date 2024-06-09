@@ -2,11 +2,11 @@
 
     <section class="content header">
         <h1 style="color: white;">
-            Administrar ventas
+            Administrar Facturas
         </h1>
         <ol class="breadcrumb" style="background-color: #7D2BA2;">
             <li><a href="#" style="color: white;"> <i class="fa fa-dashboard"></i>Inicio</a></li>
-            <li class="active" style="color: white;">Administrar ventas</li>
+            <li class="active" style="color: white;">Administrar facturas</li>
         </ol>
     </section> 
     

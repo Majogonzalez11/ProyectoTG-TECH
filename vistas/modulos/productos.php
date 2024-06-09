@@ -1,18 +1,18 @@
-<div class="content-wrapper">
+<div class="content-wrapper" style="background-color: #9E63B8;">
 
     <section class="content header">
-        <h1>
+        <h1 style="color: white;">
             Administrar productos
         </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"> <i class="fa fa-dashboard"></i>Inicio</a></li>
-            <li class="active">Administrar productos</li>
+        <ol class="breadcrumb" style="background-color: #7D2BA2;">
+            <li><a href="#" style="color: white;"> <i class="fa fa-dashboard"></i>Inicio</a></li>
+            <li class="active" style="color: white;">Administrar productos</li>
         </ol>
     </section> 
     
 <section class="content">
     <div class="box">
-        <div class="box-header with-border">
+        <div class="box-header with-border" style="background-color:#DABAEA;">
             <h3 class="box-title">Title</h3>
             <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="collapse">
@@ -22,10 +22,10 @@
                 </button>
             </div>
         </div>
-        <div class="box-body">
+        <div class="box-body" style="background-color:#DABAEA;">
             Starts creating your amazing application!
         </div>
-        <div class="box-footer">
+        <div class="box-footer" style="background-color:#DABAEA;">
             Footer
         </div>
     </div>

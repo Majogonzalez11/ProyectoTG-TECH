@@ -50,7 +50,7 @@ session_start();
 
 <!-- CUERPO DOCUMENTO -->
 
-<body class="hold-transition skin-black sidebar-collapse sidebar-mini login-page" style="background-color: lightblue;"> 
+<body class="hold-transition skin-black sidebar-collapse sidebar-mini login-page" style="background-color: #BB7BD8;"> 
   <?php
   if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
   echo '<div class="wrapper">';
@@ -69,12 +69,14 @@ session_start();
       $_GET["ruta"] == "usuarios" ||
       $_GET["ruta"] == "categorias" ||
       $_GET["ruta"] == "productos" ||
+      $_GET["ruta"] == "inventario" ||
       $_GET["ruta"] == "clientes" ||
       $_GET["ruta"] == "proveedores" ||
       $_GET["ruta"] == "inventario" ||
       $_GET["ruta"] == "ventas" ||
       $_GET["ruta"] == "crear-venta" ||
       $_GET["ruta"] == "reportes" ||
+      $_GET["ruta"] == "facturas" ||
       $_GET["ruta"] == "salir"){
         
         include "modulos/".$_GET["ruta"].".php";
