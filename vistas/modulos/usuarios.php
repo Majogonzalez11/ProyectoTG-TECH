@@ -6,7 +6,7 @@
         </h1>
         <ol class="breadcrumb" style="background-color: #7D2BA2;">
             <li><a href="inicio" style="color: white;"> <i class="fa fa-dashboard"></i>Inicio</a></li>
-            <li class="active" style="color: white;">Administrar Usuarios PRRRR</li>
+            <li class="active" style="color: white;">Administrar Usuarios</li>
         </ol>
     </section> 
 
@@ -15,7 +15,7 @@
     
     <div class="box" style="background-color:#EAEAEA;">
         <div class="box-header with-border" style="background-color:#EAEAEA;">
-            <button class="btn btn primary" data-toggle="modal" data-target="#modalAgregarUsuario" style= "background-color: #EAEAEA;">
+            <button class="btn btn primary" data-toggle="modal" data-target="#modalAgregarUsuario" style= "background: #5A3E8A; color:white;">
                 Agregar Usuario
             </button>
         </div>
@@ -76,19 +76,88 @@
 <div id="modalAgregarUsuario" class="modal fade" role="dialog">
     <div class="modal-dialog" style="background-color: #EAEAEA;" >
         <div class="modal-content" style="background-color: #EAEAEA;">
+
+             <!--CABEZA DE MODAL-->
             
-        <div class="modal-header" >
+        <div class="modal-header" style="background:#5A3E8A; color:white" >
                 <button type="button" class="close" data-dismiss="modal" style="color:#EAEAEA;">&times;</button>
                 <h4 class="modal-title">Agregar usuario</h4>
             </div>
             
-            <div class="modal-body">
-                <p>Some text in the modal.</p>
-            </div>
-            
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color: #8B5BA1;">Close</button>
-            </div>
+                <form role="form" method="post">
+                <!--CUERPO DE MODAL-->
+
+                <div class="modal-body">
+                    <div class="box-body">
+
+                <!-- ENTRADA PARA EL NOMBRE-->
+                        <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar nombre" required>
+
+
+                    </div>
+                    </div>
+
+                <!-- ENTRADA PARA EL USUARIO-->
+                    <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                <input type="text" class="form-control input-lg" name="nuevoUsuario" placeholder="Ingresar usuario" required>
+
+
+                    </div>
+                    </div>
+
+
+                    <!-- ENTRADA PARA EL CONTRASEÑA-->
+                    <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input type="password" class="form-control input-lg" name="nuevoPassword" placeholder="Ingresar contraseña" required>
+
+
+                    </div>
+                    </div>
+
+
+                    <!-- ENTRADA PARA SELECCIONAR SU PERFIL-->
+                    <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                                <select class="form-control input lg" name="nuevoPerfil">
+
+                                    <option value="">Seleccionar perfil</option>
+
+                                    <option value="Administrador">Administrador</option>
+
+                                    <option value="Vendedor">Vendedor</option>
+
+                                    <option value="Empleado Especial">Empleado especial</option>
+
+                            
+                                </select>
+
+
+                    </div>
+                    </div>
+
+                    
+
+                </div>
+                    
+                <!--PIE DE MODAL-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color: #8B5BA1;">Cerrar</button>
+
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                
+                </div>
+
+                </form>
+
+
         </div>
 </div>
 </div>
