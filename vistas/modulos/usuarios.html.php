@@ -122,13 +122,13 @@
                     </div>
 
 
-                    <!-- ENTRADA PARA SELECCIONAR SU ROL-->
+                    <!-- ENTRADA PARA SELECCIONAR SU PERFIL-->
                     <div class="fom-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
-                                <select class="form-control input lg" name="nuevoRol">
+                                <select class="form-control input lg" name="nuevoPerfil">
 
-                                    <option value="">Seleccionar rol</option>
+                                    <option value="">Seleccionar perfil</option>
 
                                     <option value="Administrador">Administrador</option>
 
@@ -154,16 +154,6 @@
                     <button type="submit" class="btn btn-primary">Guardar cambios</button>
                 
                 </div>
-
-
-                <?php
-
-                $crearUsuario = new ControladorUsuarios();
-                $crearUsuario -> ctrCrearUsuario();
-
-
-                ?>
-
 
                 </form>
 
