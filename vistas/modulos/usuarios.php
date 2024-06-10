@@ -34,36 +34,40 @@
                 </tr>
 
              </thead>
-             <!--Maquetacion de la tabla de usuarios realizada con bootstrap --> 
+
+
+          <!--Maquetacion de la tabla de usuarios realizada con bootstrap --> 
              <tbody > 
-                <tr style="background-color: #EAEAEA;">
-                    <td>1</td>
-                    <td>Usuario Administrador</td>
-                    <td>admin</td>
-                    <td>admin123</td>
-                    <td>administrador</td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-warning"><i class="fa fa-pencil"></i> </button>
-                            <button class="btn btn-danger"><i class="fa fa-times"></i> </button>
-                        </div>
-                    </td>
-                </tr>
-             </tbody>
-             <tbody>
-                <tr style="background-color: #EAEAEA;">
-                    <td>2</td>
-                    <td>Usuario Vendedor</td>
-                    <td>admin2</td>
-                    <td>admin456</td>
-                    <td>vendedor</td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-warning"><i class="fa fa-pencil" ></i> </button>
-                            <button class="btn btn-danger"><i class="fa fa-times"></i> </button>
-                        </div>
-                    </td>
-                </tr>
+
+            <?php
+
+            $item = null;
+            $valor = null;
+
+            $usuarios = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
+
+            foreach ($usuarios as $key => $value){
+                
+                echo '
+                                <tr style="background-color: #EAEAEA;">
+                                <td>1</td>
+                                <td>'.$value["nombre"].'</td>
+                                <td>'.$value["usuario"].'</td>
+                                <td>'.$value["password"].'</td>
+                                <td>'.$value["rol"].'</td>
+                                <td>
+                                <div class="btn-group">
+                                <button class="btn btn-warning"><i class="fa fa-pencil"></i> </button>
+                                <button class="btn btn-danger"><i class="fa fa-times"></i> </button>
+                            </div>
+                        </td>
+                    </tr>';
+            }
+           
+
+            ?>
+
+            
              </tbody>
             </table>
         </div>

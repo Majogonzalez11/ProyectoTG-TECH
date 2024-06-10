@@ -30,9 +30,13 @@
             <ul class="nav navbar-nav"> 
                 <li class="dropdown user user-menu" style="background-color: #9E63B8;">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color: #9E63B8;">
+
+                     
+
+
                         <img src="vistas/img/usuarios/default/defecto.jpg" class="user-image" >
 
-                        <span class="hidden-xs" style="color: white;">Usuario Administrador</span>
+                        <span class="hidden-xs" style="color: white;"><?php echo $_SESSION["nombre"]; ?></span>
 
                     </a>
                     <!--DROPDOWN TOGGLE -->
