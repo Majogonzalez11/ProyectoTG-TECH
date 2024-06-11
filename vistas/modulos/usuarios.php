@@ -57,7 +57,9 @@
                                 <td>'.$value["rol"].'</td>
                                 <td>
                                 <div class="btn-group">
-                                <button class="btn btn-warning"><i class="fa fa-pencil"></i> </button>
+                                <button class="btn btn-warning" data-toggle="modal" 
+                                data-target="#modalEditarUsuario"><i class="fa fa-pencil"></i></button>
+                                
                                 <button class="btn btn-danger"><i class="fa fa-times"></i> </button>
                             </div>
                         </td>
@@ -175,3 +177,107 @@
         </div>
 </div>
 </div>
+
+<!--(bootstrap) MODAL EDITAR USUARIO---->
+
+<div id="modalEditarUsuario" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="background-color: #EAEAEA;" >
+        <div class="modal-content" style="background-color: #EAEAEA;">
+
+             <!--CABEZA DE MODAL-->
+            
+        <div class="modal-header" style="background:#5A3E8A; color:white" >
+                <button type="button" class="close" data-dismiss="modal" style="color:#EAEAEA;">&times;</button>
+                <h4 class="modal-title">Editar usuario</h4>
+            </div>
+            
+                <form role="form" method="post">
+                <!--CUERPO DE MODAL-->
+
+                <div class="modal-body">
+                    <div class="box-body">
+
+                <!-- ENTRADA PARA EL NOMBRE-->
+                        <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control input-lg" name="editarNombre" value="" required>
+
+
+                    </div>
+                    </div>
+
+                <!-- ENTRADA PARA EL USUARIO-->
+                    <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                <input type="text" class="form-control input-lg" name="editarUsuario" value="" required>
+
+
+                    </div>
+                    </div>
+
+
+                    <!-- ENTRADA PARA EL CONTRASEÑA-->
+                    <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Ingresar nueva contraseña" required>
+
+
+                    </div>
+                    </div>
+
+
+                    <!-- ENTRADA PARA SELECCIONAR SU ROL-->
+                    <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users"></i></span>
+                                <select class="form-control input lg" name="editarRol">
+
+                                    <option value="" id="editarRol"></option>
+
+                                    <option value="Administrador">Administrador</option>
+
+                                    <option value="Vendedor">Vendedor</option>
+
+                                    <option value="Empleado Especial">Empleado especial</option>
+
+                            
+                                </select>
+
+
+                    </div>
+                    </div>
+
+                    
+
+                </div>
+                    
+                <!--PIE DE MODAL-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color: #8B5BA1;">Cerrar</button>
+
+                    <button type="submit" class="btn btn-primary">Modificar usuario</button>
+                
+               </div>
+
+               <?php
+
+          
+
+?>
+
+               
+        <!-- 
+       
+        -->
+
+
+                </form>
+
+
+        </div>
+</div>
+</div>
+
