@@ -29,11 +29,6 @@ class ModeloUsuarios {
 
    }
    
-
-  $stmt->close();
-
-  $stmt = null;
-    
 }
 
 /*==============================
@@ -57,12 +52,6 @@ static public function mdlIngresarUsuario($tabla, $datos){
         return "error";
    }
    
-  $stmt->close();
-
-  $stmt = null;
 
 }
 }
-
-
-
