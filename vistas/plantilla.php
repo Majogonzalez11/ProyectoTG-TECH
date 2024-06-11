@@ -61,9 +61,6 @@ session_start();
 
    <script src="vistas/plugins/sweetalert2/sweetalert2.all.js"></script>
 
-<!-- InputMask -->
-   <script src="../../plugins/input-mask/jquery.inputmask.js"></script>
-   <script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
 
 </head>
 
@@ -123,6 +120,7 @@ session_start();
   <!-- ./wrapper -->
 <script src="vistas/js/plantilla.js"> </script>
 <script src="vistas/js/categorias.js"></script>
+<script src="vistas/js/clientes.js"></script>
 
 
 </body>
