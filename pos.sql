@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-05-2024 a las 19:32:52
+-- Tiempo de generación: 11-06-2024 a las 07:19:56
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -20,6 +20,32 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `pos`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `id` int(11) NOT NULL,
+  `categoria` text NOT NULL,
+  `id_prod` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `categoria`, `id_prod`) VALUES
+(1, 'Dispositivos moviles', 0),
+(2, 'Smartwaches y Accesorios', 0),
+(3, 'Audio', 0),
+(4, 'Accesorios de PC', 0),
+(5, 'Dispositivos de Streaming', 0),
+(6, 'Gaming', 0),
+(7, 'Cables y Adaptadores', 0),
+(10, 'Hogar y Oficina', 0);
 
 -- --------------------------------------------------------
 
@@ -47,6 +73,13 @@ INSERT INTO `usuario` (`id_usuario`, `nombre`, `usuario`, `password`, `rol`) VAL
 --
 
 --
+-- Indices de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_prod` (`id_prod`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -57,10 +90,16 @@ ALTER TABLE `usuario`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
