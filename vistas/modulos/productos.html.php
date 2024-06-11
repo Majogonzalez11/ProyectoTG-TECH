@@ -11,6 +11,8 @@
             <li class="active" style="color: white;">Administrar productos</li>
         </ol>
     </section> 
+
+
 <section class="content">
     
     <div class="box" style="background-color:#EAEAEA;">
@@ -19,12 +21,15 @@
                 Agregar producto
             </button>
         </div>
-        <div class="box-body">
+
+
+        <div class="box-body" >
             <table class="table table-bordered table-striped dt-responsive tablas">
               <thead>
                 <tr>
                     <th style="width:10px">#</th>
                     <td>Imagen</td>
+                    <th>Producto</th>
                     <th>Codigo</th>
                     <th>Descripcion</th>
                     <th>Categoria</th>
@@ -34,61 +39,74 @@
                     <th>Agregado</th>
                     <th>Acciones</th>  
                 </tr>
-                
 
              </thead>
              <!--Maquetacion de la tabla de usuarios realizada con bootstrap --> 
              <tbody > 
+                <tr style="background-color: #EAEAEA;">
+                    <td>1</td>
+                    <td><img src="vistas/img/productos/teclado.png"class="
+                    img-tumbnail" width="40px"></td> 
+                    <td>TECLADO + MOUSE</td>
+                    <td>0001</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum</td>
+                    <td>20</td>
+                    <td>$3.000</td>
+                    <td>$6.000</td>
+                    <td>10-06-2024 8:00</td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-warning"><i class="fa fa-pencil"></i> </button>
+                            <button class="btn btn-danger"><i class="fa fa-times"></i> </button>
+                        </div>
+                    </td>
+                </tr>
+             </tbody>
+             <tbody>
 
-                <?php
+             <tr style="background-color: #EAEAEA;">
+                    <td>1</td>
+                    <td><img src="vistas/img/productos/jblc5.png"class="
+                    img-tumbnail" width="40px"></td> 
+                    <td>JBL CHARGE 5</td>
+                    <td>0002</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum</td>
+                    <td>20</td>
+                    <td>$150.000</td>
+                    <td>$300.000</td>
+                    <td>10-06-2024 8:00</td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-warning"><i class="fa fa-pencil"></i> </button>
+                            <button class="btn btn-danger"><i class="fa fa-times"></i> </button>
+                        </div>
+                    </td>
+                </tr>
+             </tbody>
+             <tbody>
+             </tbody>
 
-                    $item = null;
-                    $valor = null;
-
-                    $productos = ControladorProductos::ctrMostrarProductos($item, $valor);
-
-                    foreach ($productos as $key => $value){
-                        
-                        echo '<tr style="background-color: #EAEAEA;">
-                                <td>'.($key+1).'</td>
-                                <td><img src="vistas/img/productos/logoTGT.jpg"class="
-                                img-tumbnail" width="40px"></td> 
-                                <td>'.$value["codigo"].'</td>
-                                <td>'.$value["descripcion"].'</td>';
-
-                                $item = "id";
-                                $valor = $value["id_categoria"];
-
-                                $categoria = ControladorCategorias::ctrMostrarCategorias($item, $valor);
-
-
-
-
-                                echo '
-                                <td>'.$categoria["categoria"].'</td>
-                                <td>'.$value["stock"].'</td>
-                                <td>'.$value["precio_compra"].'</td>
-                                <td>'.$value["precio_venta"].'</td>
-                                <td>'.$value["fecha"].'</td>
-                                <td>
-                                    <div class="btn-group">
-                                        <button class="btn btn-warning"><i class="fa fa-pencil"></i> </button>
-                                        <button class="btn btn-danger"><i class="fa fa-times"></i> </button>
-                                    </div>
-                                </td>
-                                >
-                                >
-                                ';
-
-                    }
-
-
-                ?>
-
-
-
-
-            
+                <tr style="background-color: #EAEAEA;">
+                <td>1</td>
+                     <td><img src="vistas/img/productos/airpods.png"class="
+                    img-tumbnail" width="40px"></td> 
+                    <td>AIR PODS XIAOMI</td>
+                    <td>0003</td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                    <td>Lorem ipsum</td>
+                    <td>20</td>
+                    <td>$10.000</td>
+                    <td>$19.000</td>
+                    <td>10-06-2024 8:00</td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-warning"><i class="fa fa-pencil"></i> </button>
+                            <button class="btn btn-danger"><i class="fa fa-times"></i> </button>
+                        </div>
+                    </td>
+                </tr>
              </tbody>
             </table>
         </div>
@@ -117,31 +135,12 @@
                 <div class="modal-body">
                     <div class="box-body">
 
-                                    <!-- ENTRADA PARA SELECCIONAR CATEGORIA-->
-                                    <div class="fom-group">
+                <!-- ENTRADA PARA EL NOMBRE DEL PRODUCTO-->
+                        <div class="fom-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                                <select class="form-control input lg" ed="nuevaCategoria" name="nuevaCategoria" required>
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar el nombre del producto" required>
 
-                                    <option value="">Seleccionar categoria</option>
-
-                                    <?php
-
-                                    $item = null;
-
-                                    $valor = null;
-
-                                    $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
-
-                                    foreach ($categorias as $key => $value) {
-
-                                        echo '<option value="'.$value["id"].'">'.$value["categoria"].'</option>';
-                                    }
-
-                                    ?>
-
-                                                               
-                                </select>
 
                     </div>
                     </div>
@@ -150,7 +149,7 @@
                 <div class="fom-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-code"></i></span>
-                                <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" readonly required>
+                                <input type="text" class="form-control input-lg" name="nuevoCodigo" placeholder="Ingresar código" required>
 
 
                     </div>
