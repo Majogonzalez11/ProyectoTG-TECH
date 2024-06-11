@@ -117,12 +117,31 @@
                 <div class="modal-body">
                     <div class="box-body">
 
-                <!-- ENTRADA PARA EL NOMBRE DEL PRODUCTO-->
-                        <div class="fom-group">
+                                    <!-- ENTRADA PARA SELECCIONAR CATEGORIA-->
+                                    <div class="fom-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                <input type="text" class="form-control input-lg" name="nuevoNombre" placeholder="Ingresar el nombre del producto" required>
+                                <span class="input-group-addon"><i class="fa fa-th"></i></span>
+                                <select class="form-control input lg" ed="nuevaCategoria" name="nuevaCategoria" required>
 
+                                    <option value="">Seleccionar categoria</option>
+
+                                    <?php
+
+                                    $item = null;
+
+                                    $valor = null;
+
+                                    $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
+
+                                    foreach ($categorias as $key => $value) {
+
+                                        echo '<option value="'.$value["id"].'">'.$value["categoria"].'</option>';
+                                    }
+
+                                    ?>
+
+                                                               
+                                </select>
 
                     </div>
                     </div>
@@ -131,7 +150,7 @@
                 <div class="fom-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-code"></i></span>
-                                <input type="text" class="form-control input-lg" name="nuevoCodigo" placeholder="Ingresar código" required>
+                                <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" readonly required>
 
 
                     </div>
