@@ -61,6 +61,9 @@ session_start();
 
    <script src="vistas/plugins/sweetalert2/sweetalert2.all.js"></script>
 
+<!-- InputMask -->
+   <script src="../../plugins/input-mask/jquery.inputmask.js"></script>
+   <script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
 
 </head>
 
