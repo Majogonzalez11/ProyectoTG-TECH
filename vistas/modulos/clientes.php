@@ -29,38 +29,54 @@
                     <th>Nombre</th>
                     <th>Telefono</th>
                     <th>Dirección</th>
-                    <th>Total compras</th>
-                    <th>Acciones</th>
-
+                    <th>Id_venta</th>
+                    <th>Acciones</th>  
                 </tr>
 
              </thead>
-             <!--Maquetacion de la tabla de usuarios realizada con bootstrap --> 
-             <tbody > 
-                <tr style="background-color: #EAEAEA;">
-                    <td>1</td>
-                    <td>Sabrina López</td>
-                    <td>3704336655</td>
-                    <td>Maipú 500</td>
-                    <td>10</td>
+    
 
-                    <td>
-                     <div class="btn-group">
-                            <button class="btn btn-warning"><i class="fa fa-pencil"></i> </button>
-                            <button class="btn btn-danger"><i class="fa fa-times"></i> </button>
-                    </div>
-                    </td>
-                </tr>
-             </tbody>
-             
+             <tbody>
                 
+             <?php
+
+            $item = null;
+            $valor = null;
+
+            $clientes = ControladorClientes::ctrMostrarClientes($item, $valor);
+
+            foreach ($clientes as $key => $value) {
+                echo ' 
+                <tr style="background-color: #EAEAEA;">
+                <td>'.($key+1).'</td>
+                <td>'.$value["nombre"].'</td>
+                <td>'.$value["telefono"].'</td>
+                <td>'.$value["direccion"].'</td>
+                <td>'.$value["id_venta"].'</td>
+
+                <td>
+                 <div class="btn-group">
+                        <button class="btn btn-warning btnEditarCliente" data-toggle="modal" data-target="#modalEditarCliente" idCliente="'.$value["id"].'" ><i class="fa fa-pencil"></i> </button>
+                        <button class="btn btn-danger btnEliminarCliente" btnEliminarCliente" idCliente="'.$value["id"].'"><i class="fa fa-times"></i> </button>
+                </div>
+                </td>
+                </tr>
+
+                ';
+    }
+
+
+            ?>
+
+        </tbody>
+
             </table>
         </div>
     </div>
     </section>
 </div>
 
-<!--(bootstrap) modal agregar usuario-->
+<!-- modal agregar cliente-->
 
 <div id="modalAgregarCliente" class="modal fade" role="dialog">
     <div class="modal-dialog" style="background-color: #EAEAEA;" >
@@ -83,7 +99,7 @@
                         <div class="fom-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                                <input type="text" class="form-control input-lg" name="nuevoCliente" placeholder="Ingresar nombre" required>
+                                <input type="text" class="form-control input-lg" name="nuevoCliente" placeholder="Agregar cliente" required>
 
 
                     </div>
@@ -91,8 +107,8 @@
                     <!-- ENTRADA PARA EL TELEFONO-->
                     <div class="fom-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar numero de telefono" data-inputmask="'mask':'(99) 9999-999999'" data-mask required>
+                                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar numero de telefono" required>
 
 
                     </div>
@@ -100,17 +116,8 @@
                     <!-- ENTRADA PARA LA DIRECCION-->
                     <div class="fom-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-th"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
                                 <input type="text" class="form-control input-lg" name="nuevaDireccion" placeholder="Ingresar dirección" required>
-
-
-                    </div>
-                    </div>
-                    <!-- ENTRADA PARA EL TOTAL DE COMPRAS-->
-                    <div class="fom-group">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                                <input type="text" class="form-control input-lg" name="nuevoTelefono" placeholder="Ingresar numero de telefono" required>
 
 
                     </div>
@@ -126,9 +133,96 @@
                 
                 </div>
 
-                </form>
+                <?php 
 
+                    $crearCliente = new ControladorClientes();
+                    $crearCliente -> ctrCrearCliente();
+
+                ?>
+                </form>
 
         </div>
 </div>
 </div>
+
+<!--(bootstrap) modal editar cliente-->
+
+<div id="modalEditarCliente" class="modal fade" role="dialog">
+    <div class="modal-dialog" style="background-color: #EAEAEA;" >
+        <div class="modal-content" style="background-color: #EAEAEA;">
+
+             <!--CABEZA DE MODAL-->
+            
+        <div class="modal-header" style="background:#5A3E8A; color:white" >
+                <button type="button" class="close" data-dismiss="modal" style="color:#EAEAEA;">&times;</button>
+                <h4 class="modal-title">Editar cliente</h4>
+            </div>
+            
+                <form role="form" method="post">
+                <!--CUERPO DE MODAL-->
+
+                <div class="modal-body">
+                    <div class="box-body">
+
+                <!-- ENTRADA PARA EL NOMBRE-->
+                        <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-th"></i></span>
+                                <input type="text" class="form-control input-lg" name="editarCliente" id="editarCliente" required>
+                                <input type="hidden" name="idCliente" id="idCliente" required>
+
+
+                    </div>
+                    </div>
+                     <!-- ENTRADA PARA EL TELEFONO-->
+                     <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                <input type="text" class="form-control input-lg" name="editarTelefono" id="editarTelefono" required>
+
+
+                    </div>
+                    </div>
+                    <!-- ENTRADA PARA LA DIRECCION-->
+                    <div class="fom-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                                <input type="text" class="form-control input-lg" name="editarDireccion" id="editarDireccion" required>
+
+
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                    
+                <!--PIE DE MODAL-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color: #8B5BA1;">Cerrar</button>
+
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                
+                </div>
+
+    
+                <?php
+               
+                $editarCliente = new ControladorClientes();
+                $editarCliente -> ctrEditarCliente();
+                
+                ?>
+
+
+
+
+                </form>
+
+        </div>
+</div>
+</div>
+<?php 
+
+$BorrarCliente = new ControladorClientes();
+$BorrarCliente -> ctrBorrarCliente();
+
+?>
+

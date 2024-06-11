@@ -28,10 +28,7 @@ static public function mdlMostrarProductos($tabla, $item, $valor){
 
     }
 
-    $stmt ->close();
-
-    $stmt = null;
-
+  
 }
 
 }
