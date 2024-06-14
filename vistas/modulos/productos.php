@@ -21,7 +21,8 @@
         </div>
         <div class="box-body">
             <table class="table table-bordered table-striped dt-responsive tablas">
-              <thead>
+              
+            <thead>
                 <tr>
                     <th style="width:10px">#</th>
                     <td>Imagen</td>
@@ -76,8 +77,6 @@
                                         <button class="btn btn-danger"><i class="fa fa-times"></i> </button>
                                     </div>
                                 </td>
-                                >
-                                >
                                 ';
 
                     }
@@ -121,7 +120,7 @@
                                     <div class="fom-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                                <select class="form-control input lg" ed="nuevaCategoria" name="nuevaCategoria" required>
+                                <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
 
                                     <option value="">Seleccionar categoria</option>
 
@@ -135,7 +134,7 @@
 
                                     foreach ($categorias as $key => $value) {
 
-                                        echo '<option value="'.$value["id"].'">'.$value["categoria"].'</option>';
+                                        echo '<option value='.$value["id"].'">'.$value["categoria"].'</option>';
                                     }
 
                                     ?>
@@ -162,29 +161,6 @@
                                 <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span>
                                 <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripción" required>
 
-
-                    </div>
-                    </div>
-
-
-                    <!-- ENTRADA PARA SELECCIONAR CATEGORIA-->
-                    <div class="fom-group">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                                <select class="form-control input lg" name="nuevaCategoria">
-
-                                    <option value="">Seleccionar categoria</option>
-
-                                    <option value="Perifericos">Perifericos</option>
-
-                                    <option value="Parlantes">Parlantes</option>
-
-                                    <option value="Gamer">Gamer</option>
-
-                                    <option value="SmartWachs">SmartWachs</option>
-
-                            
-                                </select>
 
                     </div>
                     </div>

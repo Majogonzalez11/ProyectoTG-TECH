@@ -55,8 +55,8 @@
                                 <td>'.$value["rol"].'</td>
                                 <td>
                                  <div class="btn-group">
-                        <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id_usuario"].'" data-toggle="modal" data-target="#modalEditarUsuario"  ><i class="fa fa-pencil"></i> </button>
-                        <button class="btn btn-danger btnEliminarUsuario" btnEliminarUsuario" idUsuarioo="'.$value["id_usuario"].'"><i class="fa fa-times"></i> </button>
+                        <button class="btn btn-warning btnEditarUsuario" data-toggle="modal" data-target="#modalEditarUsuario" idUsuario="'.$value["id_usuario"].'" ><i class="fa fa-pencil"></i> </button>
+                        <button class="btn btn-danger btnEliminarUsuario" btnEliminarUsuario" idUsuario="'.$value["id_usuario"].'"><i class="fa fa-times"></i> </button>
                 </div>
                 </td>
                 </tr>';
@@ -88,7 +88,8 @@
                 <form role="form" method="post">
                 <!--CUERPO DE MODAL-->
 
- 
+                <div class="modal-body">
+                    <div class="box-body">
 
                 <!-- ENTRADA PARA EL NOMBRE-->
                         <div class="fom-group">
@@ -196,9 +197,8 @@ MODAL EDITAR USUARIO
                 <!-- ENTRADA PARA EL NOMBRE-->
                         <div class="fom-group">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-th"></i></span>
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                 <input type="text" class="form-control input-lg" name="editarNombre" value="" required>
-                               
 
 
                     </div>
@@ -208,7 +208,7 @@ MODAL EDITAR USUARIO
                     <div class="fom-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-key"></i></span>
-                                <input type="text" class="form-control input-lg" id="editarUsuario" value="" required>
+                                <input type="text" class="form-control input-lg" name="editarUsuario" value="" required>
 
 
                     </div>
@@ -219,7 +219,7 @@ MODAL EDITAR USUARIO
                     <div class="fom-group">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Ingresar la nueva contraseña" required>
+                                <input type="password" class="form-control input-lg" name="editarPassword" placeholder="Ingresar nueva contraseña" required>
 
 
                     </div>
@@ -232,7 +232,7 @@ MODAL EDITAR USUARIO
                                 <span class="input-group-addon"><i class="fa fa-users"></i></span>
                                 <select class="form-control input lg" name="editarRol">
 
-                                    <option value="" id="editarRol">Ediat rol</option>
+                                    <option value="" id="editarPerfil"></option>
 
                                     <option value="Administrador">Administrador</option>
 
@@ -262,8 +262,8 @@ MODAL EDITAR USUARIO
 
                 <!-- <?php
 
-                $editarUsuario = new ControladorUsuarios();
-                $editarUsuario -> ctrEditarUsuario();
+                //$crearUsuario = new ControladorUsuarios();
+                //$crearUsuario -> ctrCrearUsuario();
 
 
                 ?> -->

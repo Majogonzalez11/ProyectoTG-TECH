@@ -54,4 +54,36 @@ static public function mdlIngresarUsuario($tabla, $datos){
    
 
 }
+
+    /* Editar usuario */
+    static public function mdlEditarUsuario($tabla, $datos){
+     $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre, usuario = :usuario, password = :password WHERE id_usuario = :id_usuario");
+
+     $stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+     $stmt->bindParam(":usuario", $datos["usuario"], PDO::PARAM_STR);
+     $stmt->bindParam(":password", $datos["password"], PDO::PARAM_STR);
+     $stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+     if ($stmt->execute()) {
+         return "ok";
+     } else {
+         return "error";
+     }
+
+     $stmt = null;
+ }
+
+ /* Eliminar usuario */
+ static public function mdlBorrarUsuario($tabla, $datos){
+     $stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id_usuario = :id_usuario");
+     $stmt->bindParam(":id_usuario", $datos, PDO::PARAM_INT);
+
+     if ($stmt->execute()) {
+         return "ok";
+     } else {
+         return "error";
+     }
+
+     $stmt = null;
+ }
 }

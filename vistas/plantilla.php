@@ -11,7 +11,7 @@ session_start();
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-  <link rel="icon" href="vistas/img/plantillas/icono3.png">
+  <link rel="icon" href="vistas/img/productos/logoTGT.jpg">
   <!-- PLUGINS DE CSS -->
 
   <!-- Bootstrap 3.3.7 -->
@@ -31,9 +31,11 @@ session_start();
     <!-- DataTables -->
     <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
     <link rel="stylesheet" href="vistas/bower_components/datatables.net-bs/css/responsive.bootstrap.min.css">
+    
 
 
   <!-- PLUGINS DE JAVASCRIPT -->
+   
 
   <!-- jQuery 3 -->
   <script src="vistas/bower_components/jquery/dist/jquery.min.js"></script>
@@ -53,7 +55,7 @@ session_start();
   <!-- DataTables -->
 <script src="vistas/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="vistas/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<script src="vistas/bower_components/datatables.net/js/dataTables.responsive.min.js"></script>
+<script src="vistas/bower_components/datatables.net-bs/js/dataTables.responsive.min.js"></script>
 <script src="vistas/bower_components/datatables.net-bs/js/responsive.bootstrap.min.js"></script>
 
 

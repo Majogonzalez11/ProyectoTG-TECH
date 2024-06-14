@@ -28,7 +28,7 @@
                     <th style="width:10px">#</th>
                     <th>ID factura</th>
                     <th>ID venta</th>
-                    <th>ID usuario/th>
+                    <th>ID usuario</th>
                     <th>ID cliente</th>
                     <th>Fecha</th>
                     <th>Cantidad vendida</th>

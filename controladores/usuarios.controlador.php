@@ -22,7 +22,7 @@ class ControladorUsuarios {
             if (is_array($respuesta) && $respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $_POST["ingPassword"])
             {
                 $_SESSION["iniciarSesion"] = "ok";
-                $_SESSION["id"] = $respuesta["id"];
+                $_SESSION["id_usuario"] = $respuesta["id_usuario"];
                 $_SESSION["nombre"] = $respuesta["nombre"];
                 $_SESSION["usuario"] = $respuesta["usuario"];
                 $_SESSION["rol"] = $respuesta["rol"];
@@ -143,4 +143,71 @@ class ControladorUsuarios {
 
    }
 
+
+
+/* Editar usuario*/ 
+static public function ctrEditarUsuario() {
+   if (isset($_POST["editarUsuario"])) {
+       $tabla = "usuario";
+
+       $datos = array(
+           "id_usuario" => $_POST["idUsuario"],
+           "nombre" => $_POST["editarUsuario"],
+           "password" => $_POST["editarPassword"],
+           "rol" => $_POST["editarRol"]
+       );
+
+       $respuesta = ModeloUsuarios::mdlEditarUsuario($tabla, $datos);
+
+       if ($respuesta == "ok") {
+           echo '<script>
+               swal({
+                   type: "success",
+                   title: "¡Los cambios han sido efectuados correctamente!",
+                   showConfirmButton: true,
+                   confirmButtonText: "Cerrar"
+               }).then((result) => {
+                   if (result.value) {
+                       window.location = "usuarios";
+                   }
+               })
+           </script>';
+       } else {
+           echo '<script>
+               swal({
+                   type: "error",
+                   title: "¡Error al efectuar cambios!",
+                   showConfirmButton: true,
+                   confirmButtonText: "Cerrar"
+               });
+           </script>';
+       }
+   }
 }
+
+/* Borrar cliente */ 
+static public function ctrBorrarUsuario(){
+   if(isset($_GET["idUsuario"])){
+       $tabla = "usuario";
+       $datos = $_GET["idUsuario"];
+
+       $respuesta = ModeloUsuarios::mdlBorrarUsuario($tabla, $datos);
+
+       if($respuesta == "ok") {
+           echo '<script>
+               swal({
+                   type: "success",
+                   title: "¡El usuario ha sido borrado correctamente!",
+                   showConfirmButton: true,
+                   confirmButtonText: "Cerrar"
+               }).then((result) => {
+                   if (result.value) {
+                       window.location = "clientes";
+                   }
+               })
+           </script>';
+       }
+   }
+}
+}
+?>

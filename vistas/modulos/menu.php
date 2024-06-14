@@ -28,7 +28,7 @@
 
             <li>
                 <a href="productos" style="background-color: #3A0D5E;">
-                    <i class="fa fa-product-hunt" style="color: white;"></i>
+                    <i class="fa fa-laptop" style="color: white;"></i>
                     <span>Productos</span>
                 </a>
             </li>
@@ -47,14 +47,7 @@
                 </a>
             </li>
 
-            <li>
-                <a href="proveedores" style="background-color: #3A0D5E;">
-                <i class="fa fa-truck" style="color: white;"></i>
-                    <span>Proveedores</span>
-                </a>
-            </li>
-
-           
+                   
             <li class="treeview" >
                 <a href="" style="background-color: #3A0D5E;">
                     <i class="fa fa-list-ul" ></i>
@@ -90,11 +83,20 @@
             </li>
             <li>
                 <a href="facturas" style="background-color: #3A0D5E;">
-                <i class="fa fa-circle" style="color: white;"></i>
+                <i class="fa fa-dollar" style="color: white;"></i>
                     <span >facturas</span>
                 </a>
             </li>
-        </ul>
+
+            <li>
+    <a href="manual/manual.pdf" download style="background-color: #3A0D5E;">
+        <i class="fa fa-book" style="color: white;"></i>
+        <span style="color: white;">Manual de Usuarios</span>
+    </a>
+</li>
+
+
+</ul>
 
     </section>
 
